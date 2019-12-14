@@ -10,8 +10,10 @@ int main(int argc, char* argv[])
     Hypodermic::ContainerBuilder containerBuilder;
     containerBuilder.registerType<A>();
     containerBuilder.registerType<B>();
+    containerBuilder.registerType<C>();
 
     auto container = containerBuilder.build();
-    auto c = container->resolve<C>();
+    container->resolve<C>()->doC();
+
     return 0;
 }

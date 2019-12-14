@@ -6,5 +6,9 @@
 C::C(std::shared_ptr<Hypodermic::Container> container)
     : m_container(container)
 {
+}
+
+void C::doC()
+{
     m_container->resolve<B>()->doB();
 }
