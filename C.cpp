@@ -1,7 +1,7 @@
 #include "C.h"
 #include <Hypodermic/Container.h>
 
-#include "B.h"
+#include "IB.h"
 
 C::C(std::shared_ptr<Hypodermic::Container> container)
     : m_container(container)
@@ -10,5 +10,5 @@ C::C(std::shared_ptr<Hypodermic::Container> container)
 
 void C::doC()
 {
-    m_container->resolve<B>()->doB();
+    m_container->resolve<IB>()->doB();
 }

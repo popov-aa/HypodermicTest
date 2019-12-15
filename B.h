@@ -2,13 +2,14 @@
 #define B_H
 
 class A;
+#include "IB.h"
 #include <memory>
 
-class B {
+class B : public IB {
 public:
     explicit B(std::shared_ptr<A> a);
 
-    virtual void doB();
+    virtual void doB() override;
 
 private:
     std::shared_ptr<A> m_a;
